@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// respond with a text response to arequest to a specific route
+Route::get('/text', function () {
+  return "hello world";
+});
+
+// respond with json response
+Route::get('/json', function () {
+  return ["user" => "amr"];
+});
+
+// respond with a page.blade.php view
+Route::get('/newpage', function () {
+  return view('newpage');
+});
